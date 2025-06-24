@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidados del Lambrín - Bell & Sons</title>
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Styles are now included directly in the HTML -->
+    <style>
+        /* ------------------------- */
+        /* --- GENERAL STYLES & FONTS --- */
+        /* ------------------------- */
+
+        :root {
+            --dark-gray: #3a3a3a;
+            --light-cream: #f4f2ef;
+            --border-color: #c9b8a8;
+            --text-color: #333333;
+            --white: #ffffff;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-body);
+            background-color: var(--light-cream);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--dark-gray);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ------------------------- */
+        /* --- HEADER --- */
+        /* ------------------------- */
+
+        .site-header {
+            background-color: var(--dark-gray);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .site-header .logo {
+            width: 280px; /* Adjusted size for the new logo */
+            margin: 0 auto;
+        }
+
+        /* ------------------------- */
+        /* --- HERO SECTION --- */
+        /* ------------------------- */
+
+        .hero-section {
+            /* Using an image from the provided URL as the background */
+            background: url('http://bellandsons.ahuehuetedigital.com/cuidadoslambrin/fvdroojohfzokoltmid2 (2).jpg') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 120px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 40vh;
+            position: relative;
+        }
+        
+        /* Added an overlay for better text readability */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative; /* Ensure text is above the overlay */
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin: 0 0 10px 0;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            margin: 0;
+            font-weight: 400;
+        }
+
+        /* ------------------------- */
+        /* --- CARE SECTION --- */
+        /* ------------------------- */
+
+        .care-section {
+            padding: 60px 0;
+        }
+
+        .care-section h2 {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 50px;
+        }
+
+        .care-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        /* Styling for the new image-based cards */
+        .care-intro-image,
+        .care-tip-image {
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 0 auto;
+        }
+
+        .care-intro-image:hover,
+        .care-tip-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        
+        .care-intro-image {
+             max-width: 450px; /* Control the size of the main card */
+        }
+        
+        .care-tips-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .care-tip-image {
+            max-width: 500px; /* Control the size of the tip cards */
+        }
+
+        /* ------------------------- */
+        /* --- FOOTER --- */
+        /* ------------------------- */
+
+        .site-footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 50px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .logo-footer {
+            width: 250px;
+            margin: 0 auto;
+        }
+
+        .footer-contact p {
+            margin: 8px 0;
+        }
+        
+        .footer-contact strong {
+            color: var(--white);
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .footer-social a {
+            color: var(--white);
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: var(--border-color);
+        }
+
+        .powered-by {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        /* ------------------------- */
+        /* --- RESPONSIVE DESIGN --- */
+        /* ------------------------- */
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+                text-align: left;
+                align-items: start;
+            }
+            .logo-footer {
+                margin: 0;
+            }
+            .footer-social {
+                justify-content: flex-start;
+                align-self: center;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .care-grid {
+                grid-template-columns: 1fr 1.5fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container">
+             <!-- Logo blanco transparente para el encabezado -->
+            <img src="http://bellandsons.ahuehuetedigital.com/cuidadoslambrin/logoblancotransparente.png" alt="Logo de Bell & Sons Trading Company" class="logo">
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section with background image -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Decoración elegante que perdura</h1>
+                <p>Lambrines de WPC para interiores.</p>
+            </div>
+        </section>
+
+        <!-- Care Instructions Section -->
+        <section class="care-section">
+            <div class="container">
+                <h2>Cuidados del Lambrin</h2>
+                <div class="care-grid">
+                    <!-- Tarjeta informativa principal (ahora como imagen) -->
+                    <img src="http://bellandsons.ahuehuetedigital.com/cuidadoslambrin/vvjxm4bvifmgvdsnhwi3 (2).jpg" alt="Cómo cuidar de tus materiales" class="care-intro-image">
+                    
+                    <!-- Consejos de cuidado (ahora como imágenes) -->
+                    <div class="care-tips-container">
+                        <img src="http://bellandsons.ahuehuetedigital.com/cuidadoslambrin/qbbhts0pwb79y5ukvvqb (3).jpg" alt="Consejo sobre limpieza regular del lambrín" class="care-tip-image">
+                        <img src="http://bellandsons.ahuehuetedigital.com/cuidadoslambrin/fvdroojohfzokoltmid2 (3).jpg" alt="Consejo sobre proteger el lambrín contra rayones" class="care-tip-image">
+                        <img src="http://bellandsons.ahuehuetedigital.com/cuidadoslambrin/iojpzkipgfnpvmozxx99 (3).jpg" alt="Consejo sobre evitar humedad excesiva en el lambrín" class="care-tip-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <!-- Footer Logo -->
+            <div class="footer-logo-container">
+                 <!-- Logo blanco para el pie de página para mejor contraste -->
+                <img src="http://bellandsons.ahuehuetedigital.com/cuidadoslambrin/logoblancotransparente.png" alt="Logo de Bell & Sons Trading Company en el pie de página" class="logo-footer">
+            </div>
+            <!-- Información de Contacto y Dirección -->
+            <div class="footer-contact">
+                <p><strong>Teléfono:</strong> 442 141 5727</p>
+                <p><strong>Dirección:</strong><br>Celeritas 14, bodega 1, Parque Industrial La Noria,<br>El Marqués, Qro. 76246.</p>
+                <p><strong>Sucursal El Retablo:</strong><br>Blvd. Águila No. 20 Local 5, Plaza Aguilar,<br>Col. El Retablo C.P. 76269, El Marqués, Querétaro</p>
+                <p>Lunes a Sábado de 10:00 a 18:00 horas.</p>
+            </div>
+            <!-- Enlaces a Redes Sociales -->
+            <div class="footer-social">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.282.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.231 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.884a1.152 1.152 0 1 0 0 2.304 1.152 1.152 0 0 0 0-2.304zM8 4.868A3.132 3.132 0 1 0 8 11.132a3.132 3.132 0 0 0 0-6.264zm0 1.442a1.69 1.69 0 1 1 0 3.38 1.69 1.69 0 0 1 0-3.38z"/></svg>
+                </a>
+            </div>
+        </div>
+         <!-- Powered by Section -->
+        <div class="powered-by">
+            <p>Powered by Converdy</p>
+        </div>
+    </footer>
+
+</body>
+</html>
