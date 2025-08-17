@@ -126,6 +126,13 @@
 # Remove trailing slashes
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    # Redirect old tendencias 2024 slug to 2025
+    RewriteRule ^blog/tendencias-pisos-wpc-2024\.html$ https://bellandsons.com.mx/blog/tendencias-pisos-wpc-2025.html [R=301,L]
+    
+    # Redirect non-existent/legacy blog slugs to current articles
+    RewriteRule ^blog/colores-wpc-psicologia\.html$ https://bellandsons.com.mx/blog/lambrin-wpc-que-es-colores-usos.html [R=301,L]
+    RewriteRule ^blog/wpc-vs-madera-vs-laminado\.html$ https://bellandsons.com.mx/blog/wpc-vs-marmol-pvc.html [R=301,L]
+    RewriteRule ^blog/instalacion-wpc-diy\.html$ https://bellandsons.com.mx/blog/calculo-lambrin-wpc-m2.html [R=301,L]
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{THE_REQUEST} /+([^?]*?)/?(\?[^\s]*)?(\s|\?)
     RewriteRule ^ /%1%2 [R=301,L]
