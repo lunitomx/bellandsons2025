@@ -61,11 +61,66 @@
     Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 </IfModule>
 
-# Force HTTPS
+# Canonical domain and HTTPS redirect
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteCond %{HTTPS} off
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Canonical + HTTPS
+    RewriteCond %{HTTPS} !=on [OR]
+    RewriteCond %{HTTP_HOST} !^bellandsons\.com\.mx$ [NC]
+    RewriteRule ^(.*)$ https://bellandsons.com.mx/$1 [R=301,L]
+</IfModule>
+
+# Product and Collection Redirects to Catalog
+<IfModule mod_rewrite.c>
+    # Specific product redirects
+    RedirectMatch 301 ^/products/tablero-marmol-pvc-color-obscuro/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/tablero-marmo-pvc/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/lambrin-wpc-white-cedar/?.*$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/caja-de-18-lambrines-wpc-color-colorado-oak/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/lambrin-wpc-color-chocolate/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/lambrin-wpc-color-marmoleado-claro/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/lambrin-wpc-color-parota/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/lambrin-wpc-color-negro/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/lambrin-wpc-color-gris-1/?.*$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/lambrines-wpc-color-walnut/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/spc-flooring-1919/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/lambrin-wpc-color-marmoleado-obscuro/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/lambrin-wpc-color-gris/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/caja-de-18-lambrines-wpc-color-aspen-grey/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/spc-flooring-2077/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/spc-flooring-maplegris/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/piso-deck-para-exterior/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/spc-flooring-abedul/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/spc-flooring-cacao/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/spc-flooring-1935/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/spc-flooring-1965/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/spc-flooring-1906/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/spc-flooring-eucalipto/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/products/spc-flooring-castano/?$ https://bellandsons.com.mx/catalogo/
+    
+    # Collection redirects
+    RedirectMatch 301 ^/collections/laminas-de-marmol-pvc/?.*$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/collections/frontpage/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/collections/all/?.*$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/collections/pisos/?$ https://bellandsons.com.mx/catalogo/
+    
+    # Page redirects
+    RedirectMatch 301 ^/pages/contact/?$ https://bellandsons.com.mx/#contacto
+    RedirectMatch 301 ^/pages/envios-y-devoluciones/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/pages/distribuidores/?$ https://bellandsons.com.mx/#contacto
+    RedirectMatch 301 ^/pages/aviso-de-privacidad/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/pages/terminos-y-condiciones/?$ https://bellandsons.com.mx/catalogo/
+    RedirectMatch 301 ^/pages/preguntas-frecuentes/?$ https://bellandsons.com.mx/#faq
+    
+    # App redirects
+    RedirectMatch 301 ^/apps/wpdapp/?.*$ https://bellandsons.com.mx/catalogo/
+    
+    # Fallback: any remaining products or collections to catalog
+    RewriteRule ^products/ https://bellandsons.com.mx/catalogo/ [R=301,L]
+    RewriteRule ^collections/ https://bellandsons.com.mx/catalogo/ [R=301,L]
+    RewriteRule ^pages/ https://bellandsons.com.mx/catalogo/ [R=301,L]
+    RewriteRule ^apps/ https://bellandsons.com.mx/catalogo/ [R=301,L]
 </IfModule>
 
 # Remove trailing slashes
