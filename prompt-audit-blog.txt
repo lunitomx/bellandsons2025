@@ -1,0 +1,7 @@
+Actúa como Auditor SEO/SGE/GEO y Frontend Performance. Revisa el HTML entregado y:
+1) Reporta 5 mejoras rápidas para LCP/CLS/INP (con líneas/fragmentos a cambiar).
+2) Valida JSON-LD (menciona errores y entrega el bloque corregido).
+3) Revisa accesibilidad (roles, aria, foco, contraste) y propone fixes concretos.
+4) Optimiza 10 ALT TEXT para intención local en {{ciudad}} sin keyword stuffing.
+5) Verifica enlaces internos/externos (anchor, rel) y sugiere 3 internos adicionales.
+Devuelve un DIFF claro (antes→después) y el HTML FINAL corregido.

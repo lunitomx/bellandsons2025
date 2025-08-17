@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Bell & Sons | Guías WPC | Tendencias y Consejos</title>
+    <meta name="description" content="Blog especializado en pisos WPC: tendencias, instalación, mantenimiento y diseño. Guías profesionales para transformar tus espacios.">
+    <meta name="keywords" content="blog pisos WPC, tendencias WPC, instalación WPC, mantenimiento pisos, diseño interiores">
+    <link rel="canonical" href="https://bellandsons.com.mx/blog/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blog Bell & Sons | Guías WPC | Tendencias y Consejos">
+    <meta property="og:description" content="Blog especializado en pisos WPC: tendencias, instalación, mantenimiento y diseño. Guías profesionales para transformar tus espacios.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bellandsons.com.mx/blog/">
+    <meta property="og:image" content="https://bellandsons.com.mx/proyectos/t1gfdpzi5erskufb58na.jpg">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Fraunces', 'serif'],
+                        'sans': ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#a47e58',
+                        'primary-dark': '#8e6f4f',
+                        'accent': '#3c8d7b',
+                        'accent-dark': '#327a6a',
+                        'warm-white': '#fefdfb',
+                        'warm-gray': '#f8f6f3',
+                        'text-muted': '#6b7280',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .text-fluid-xl { font-size: clamp(2rem, 4vw, 3.5rem); }
+        .text-fluid-lg { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+        .text-fluid-base { font-size: clamp(1rem, 2vw, 1.125rem); }
+        
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        
+        .line-clamp-2 { 
+            display: -webkit-box; 
+            -webkit-line-clamp: 2; 
+            -webkit-box-orient: vertical; 
+            overflow: hidden; 
+        }
+        
+        .line-clamp-3 { 
+            display: -webkit-box; 
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical; 
+            overflow: hidden; 
+        }
+        
+        .focus-ring:focus { outline: 2px solid #a47e58; outline-offset: 2px; }
+        
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+    
+    <!-- JSON-LD for Blog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Blog Bell & Sons",
+        "description": "Blog especializado en pisos WPC con guías, tendencias y consejos profesionales",
+        "url": "https://bellandsons.com.mx/blog/",
+        "author": {
+            "@type": "Organization",
+            "name": "Bell & Sons"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Bell & Sons",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://bellandsons.com.mx/proyectos/xqsp3rnuzjqhnnscyg4u%20(1).png"
+            }
+        }
+    }
+    </script>
+</head>
+
+<body class="bg-warm-white font-sans">
+    <!-- Navigation -->
+    <header class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../proyectos/xqsp3rnuzjqhnnscyg4u%20(1).png" alt="Bell & Sons Logo" class="h-10 w-auto">
+                    </a>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-primary transition-colors font-medium focus-ring">Inicio</a>
+                    <a href="../index.html#wpc" class="text-gray-700 hover:text-primary transition-colors font-medium focus-ring">¿Qué es WPC?</a>
+                    <a href="../index.html#proyectos" class="text-gray-700 hover:text-primary transition-colors font-medium focus-ring">Proyectos</a>
+                    <a href="index.html" class="text-primary font-semibold focus-ring">Blog</a>
+                    <a href="../index.html#contacto" class="text-gray-700 hover:text-primary transition-colors font-medium focus-ring">Contacto</a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-700 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary p-2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- Blog Hero -->
+        <section class="py-20 px-6 bg-gradient-to-br from-warm-gray to-white">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h1 class="text-fluid-xl font-serif text-gray-900 mb-6">
+                    Blog de Inspiración WPC
+                </h1>
+                <p class="text-text-muted text-fluid-base max-w-2xl mx-auto leading-relaxed">
+                    Descubre tendencias, consejos profesionales y guías especializadas para transformar tus espacios con la elegancia y durabilidad del WPC premium.
+                </p>
+            </div>
+        </section>
+
+        <!-- Categories Filter -->
+        <section class="py-8 px-6 bg-white border-b">
+            <div class="container mx-auto max-w-6xl">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="category-filter active bg-primary text-white px-6 py-2 rounded-full font-medium transition-colors" data-category="all">
+                        Todos los Artículos
+                    </button>
+                    <button class="category-filter bg-gray-100 text-gray-700 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-medium transition-colors" data-category="tendencias">
+                        Tendencias
+                    </button>
+                    <button class="category-filter bg-gray-100 text-gray-700 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-medium transition-colors" data-category="mantenimiento">
+                        Mantenimiento
+                    </button>
+                    <button class="category-filter bg-gray-100 text-gray-700 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-medium transition-colors" data-category="diseño">
+                        Diseño
+                    </button>
+                    <button class="category-filter bg-gray-100 text-gray-700 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-medium transition-colors" data-category="diy">
+                        DIY
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Article -->
+        <section class="py-12 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-2xl font-serif text-gray-900 mb-8">Artículo Destacado</h2>
+                <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover-lift">
+                    <div class="lg:flex">
+                        <div class="lg:w-1/2 h-64 lg:h-auto">
+                            <img src="../proyectos/hvaldmligws9kbaf2kcl.jpg" alt="Tendencias en pisos WPC 2024" 
+                                 class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="lg:w-1/2 p-8">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium mr-4">Destacado</span>
+                                <span class="text-text-muted text-sm">15 Enero 2024 • 5 min lectura</span>
+                            </div>
+                            <h3 class="font-serif text-2xl lg:text-3xl text-gray-900 mb-4">
+                                5 Tendencias en Pisos WPC que Dominarán 2024
+                            </h3>
+                            <p class="text-text-muted leading-relaxed mb-6">
+                                Descubre las últimas tendencias en diseño y acabados WPC que están transformando los hogares mexicanos este año. Desde colores naturales hasta texturas innovadoras.
+                            </p>
+                            <a href="tendencias-pisos-wpc-2024.html" 
+                               class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-primary-dark transition-colors focus-ring">
+                                Leer Artículo Completo
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="py-12 px-6 bg-warm-gray">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-2xl font-serif text-gray-900 mb-8">Últimos Artículos</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
+                    
+                    <!-- Article 2 -->
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift blog-item" data-category="mantenimiento">
+                        <div class="relative h-48">
+                            <img src="../proyectos/laoypx0qxnj7twzu29zg.jpg" alt="Guía de mantenimiento" 
+                                 class="w-full h-full object-cover" loading="lazy">
+                            <div class="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">
+                                Mantenimiento
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-text-muted mb-3">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>10 Enero 2024</span>
+                                <span class="mx-2">•</span>
+                                <span>7 min lectura</span>
+                            </div>
+                            <h3 class="font-serif text-xl text-gray-900 mb-3 line-clamp-2">
+                                Guía Completa: Cómo Mantener tus Pisos WPC Como Nuevos
+                            </h3>
+                            <p class="text-text-muted leading-relaxed mb-4 line-clamp-3">
+                                Tips profesionales para prolongar la vida útil de tus pisos WPC y mantener su belleza original por décadas.
+                            </p>
+                            <a href="mantenimiento-pisos-wpc.html" 
+                               class="inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors focus-ring">
+                                Leer más <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift blog-item" data-category="comparativas">
+                        <div class="relative h-48">
+                            <img src="../proyectos/wuypwynunyr2ja03t6gq.jpg" alt="Comparativas WPC" 
+                                 class="w-full h-full object-cover" loading="lazy">
+                            <div class="absolute top-4 left-4 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                Comparativas
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-text-muted mb-3">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>5 Enero 2024</span>
+                                <span class="mx-2">•</span>
+                                <span>6 min lectura</span>
+                            </div>
+                            <h3 class="font-serif text-xl text-gray-900 mb-3 line-clamp-2">
+                                WPC vs Madera vs Laminado: ¿Cuál Elegir en 2024?
+                            </h3>
+                            <p class="text-text-muted leading-relaxed mb-4 line-clamp-3">
+                                Análisis comparativo detallado para ayudarte a tomar la mejor decisión para tu proyecto de remodelación.
+                            </p>
+                            <a href="wpc-vs-madera-vs-laminado.html" 
+                               class="inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors focus-ring">
+                                Leer más <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift blog-item" data-category="diy">
+                        <div class="relative h-48">
+                            <img src="../proyectos/qplloyipy3z3r507mpxr.jpg" alt="Instalación DIY" 
+                                 class="w-full h-full object-cover" loading="lazy">
+                            <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                                DIY
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-text-muted mb-3">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>28 Diciembre 2023</span>
+                                <span class="mx-2">•</span>
+                                <span>10 min lectura</span>
+                            </div>
+                            <h3 class="font-serif text-xl text-gray-900 mb-3 line-clamp-2">
+                                Instalación WPC: Guía Paso a Paso para Principiantes
+                            </h3>
+                            <p class="text-text-muted leading-relaxed mb-4 line-clamp-3">
+                                Todo lo que necesitas saber para instalar pisos WPC por tu cuenta, con tips profesionales y herramientas recomendadas.
+                            </p>
+                            <a href="instalacion-wpc-diy.html" 
+                               class="inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors focus-ring">
+                                Leer más <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 5 -->
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift blog-item" data-category="diseño">
+                        <div class="relative h-48">
+                            <img src="../proyectos/jh4xm1l3bhyfed27kpc5.jpg" alt="Colores y diseño" 
+                                 class="w-full h-full object-cover" loading="lazy">
+                            <div class="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">
+                                Diseño
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-text-muted mb-3">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>20 Diciembre 2023</span>
+                                <span class="mx-2">•</span>
+                                <span>8 min lectura</span>
+                            </div>
+                            <h3 class="font-serif text-xl text-gray-900 mb-3 line-clamp-2">
+                                Psicología del Color: Eligiendo el WPC Perfecto para tu Hogar
+                            </h3>
+                            <p class="text-text-muted leading-relaxed mb-4 line-clamp-3">
+                                Cómo los colores y texturas de los pisos WPC influyen en el ambiente y la percepción de tus espacios.
+                            </p>
+                            <a href="colores-wpc-psicologia.html" 
+                               class="inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors focus-ring">
+                                Leer más <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Additional articles here -->
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift blog-item" data-category="tendencias">
+                        <div class="relative h-48">
+                            <img src="../proyectos/ayzkg6qu6bd0hlxed5xi.jpg" alt="Texturas WPC innovadoras" 
+                                 class="w-full h-full object-cover" loading="lazy">
+                            <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                                Tendencias
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-text-muted mb-3">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>15 Diciembre 2023</span>
+                                <span class="mx-2">•</span>
+                                <span>6 min lectura</span>
+                            </div>
+                            <h3 class="font-serif text-xl text-gray-900 mb-3 line-clamp-2">
+                                Texturas WPC: La Nueva Revolución en Diseño de Interiores
+                            </h3>
+                            <p class="text-text-muted leading-relaxed mb-4 line-clamp-3">
+                                Explora las texturas más innovadoras en WPC y cómo pueden transformar completamente el estilo de tu hogar.
+                            </p>
+                            <a href="texturas-wpc-innovadoras.html" 
+                               class="inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors focus-ring">
+                                Leer más <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center mt-12">
+                    <button class="bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary-dark transition-colors focus-ring">
+                        Cargar Más Artículos
+                        <i class="fas fa-chevron-down ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter CTA -->
+        <section class="py-16 px-6 bg-primary">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h2 class="text-fluid-lg font-serif text-white mb-6">
+                    Suscríbete a Nuestro Newsletter
+                </h2>
+                <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                    Recibe las últimas tendencias, consejos y ofertas exclusivas directamente en tu correo electrónico.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Tu correo electrónico" 
+                           class="flex-1 px-6 py-3 rounded-full border-0 focus:ring-2 focus:ring-white focus:outline-none">
+                    <button class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors focus-ring">
+                        Suscribirse
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <img src="../proyectos/xqsp3rnuzjqhnnscyg4u%20(1).png" alt="Bell & Sons Logo" class="h-12 w-auto mb-4">
+                    <p class="text-gray-300 leading-relaxed">
+                        Especialistas en pisos y muros WPC premium. Transformamos espacios con materiales que combinan belleza, durabilidad y sustentabilidad.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-serif text-lg text-white mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-300 hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="../index.html#proyectos" class="text-gray-300 hover:text-white transition-colors">Proyectos</a></li>
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="../index.html#contacto" class="text-gray-300 hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-serif text-lg text-white mb-4">Contacto</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-phone mr-2"></i> +52 442 475 1433</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@bellandsons.com.mx</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Querétaro, México</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Bell & Sons. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Category filter functionality
+        const categoryFilters = document.querySelectorAll('.category-filter');
+        const blogItems = document.querySelectorAll('.blog-item');
+
+        categoryFilters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                // Remove active class from all filters
+                categoryFilters.forEach(f => {
+                    f.classList.remove('active', 'bg-primary', 'text-white');
+                    f.classList.add('bg-gray-100', 'text-gray-700');
+                });
+
+                // Add active class to clicked filter
+                filter.classList.add('active', 'bg-primary', 'text-white');
+                filter.classList.remove('bg-gray-100', 'text-gray-700');
+
+                const category = filter.dataset.category;
+
+                // Filter blog items
+                blogItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

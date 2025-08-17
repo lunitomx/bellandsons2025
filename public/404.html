@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página No Encontrada - Bell & Sons</title>
+    <meta name="description" content="La página que buscas no existe. Regresa al inicio de Bell & Sons para explorar nuestros pisos WPC premium.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Fraunces', 'serif'],
+                        'sans': ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#a47e58',
+                        'primary-dark': '#8e6f4f',
+                        'accent': '#3c8d7b',
+                        'accent-dark': '#327a6a',
+                        'warm-white': '#fefdfb',
+                        'warm-gray': '#f8f6f3',
+                        'text-muted': '#6b7280',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .text-fluid-xl { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        .text-fluid-lg { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+        
+        .fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn 0.8s ease forwards; }
+        .fade-in-delay { animation-delay: 0.3s; }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="bg-warm-white font-sans min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-4 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex items-center justify-between">
+                <a href="/" class="flex items-center">
+                    <img src="/proyectos/xqsp3rnuzjqhnnscyg4u%20(1).png" alt="Bell & Sons Logo" class="h-10 w-auto">
+                </a>
+                
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="text-gray-700 hover:text-primary transition-colors font-medium">Inicio</a>
+                    <a href="/#proyectos" class="text-gray-700 hover:text-primary transition-colors font-medium">Proyectos</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-primary transition-colors font-medium">Blog</a>
+                    <a href="/#contacto" class="text-gray-700 hover:text-primary transition-colors font-medium">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex items-center justify-center py-20 px-6">
+        <div class="text-center max-w-2xl mx-auto">
+            <!-- 404 Number -->
+            <div class="fade-in mb-8">
+                <span class="text-fluid-xl font-serif text-primary opacity-50">404</span>
+            </div>
+            
+            <!-- Title -->
+            <h1 class="text-fluid-lg font-serif text-gray-900 mb-6 fade-in fade-in-delay">
+                Página No Encontrada
+            </h1>
+            
+            <!-- Description -->
+            <p class="text-xl text-text-muted leading-relaxed mb-8 fade-in fade-in-delay">
+                Lo sentimos, la página que buscas no existe o ha sido movida. Te invitamos a explorar nuestros pisos WPC premium y proyectos destacados.
+            </p>
+            
+            <!-- Search Suggestions -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 fade-in fade-in-delay">
+                <h2 class="font-serif text-xl text-gray-900 mb-4">¿Qué estás buscando?</h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <a href="/" class="flex items-center p-4 bg-warm-gray rounded-xl hover:bg-primary hover:text-white transition-colors group">
+                        <i class="fas fa-home mr-3 text-primary group-hover:text-white"></i>
+                        <span class="font-medium">Página Principal</span>
+                    </a>
+                    <a href="/#proyectos" class="flex items-center p-4 bg-warm-gray rounded-xl hover:bg-primary hover:text-white transition-colors group">
+                        <i class="fas fa-images mr-3 text-primary group-hover:text-white"></i>
+                        <span class="font-medium">Galería de Proyectos</span>
+                    </a>
+                    <a href="/blog/" class="flex items-center p-4 bg-warm-gray rounded-xl hover:bg-primary hover:text-white transition-colors group">
+                        <i class="fas fa-newspaper mr-3 text-primary group-hover:text-white"></i>
+                        <span class="font-medium">Blog y Artículos</span>
+                    </a>
+                    <a href="/#contacto" class="flex items-center p-4 bg-warm-gray rounded-xl hover:bg-primary hover:text-white transition-colors group">
+                        <i class="fas fa-phone mr-3 text-primary group-hover:text-white"></i>
+                        <span class="font-medium">Información de Contacto</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in fade-in-delay">
+                <a href="/" 
+                   class="inline-flex items-center bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-dark transition-colors shadow-lg">
+                    <i class="fas fa-arrow-left mr-3"></i>
+                    Volver al Inicio
+                </a>
+                <a href="http://qr.ahuehuetedigital.com/whatsappbands" 
+                   target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-accent-dark transition-colors shadow-lg">
+                    <i class="fab fa-whatsapp mr-3"></i>
+                    Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <img src="/proyectos/xqsp3rnuzjqhnnscyg4u%20(1).png" alt="Bell & Sons Logo" class="h-12 w-auto mb-4 filter brightness-0 invert">
+                    <p class="text-gray-300 leading-relaxed">
+                        Especialistas en pisos y muros WPC premium. Transformamos espacios con materiales que combinan belleza, durabilidad y sustentabilidad.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-serif text-lg text-white mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-300 hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="/#proyectos" class="text-gray-300 hover:text-white transition-colors">Proyectos</a></li>
+                        <li><a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="/#contacto" class="text-gray-300 hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-serif text-lg text-white mb-4">Contacto</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-phone mr-2"></i> +52 442 475 1433</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@bellandsons.com.mx</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Querétaro, México</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Bell & Sons. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

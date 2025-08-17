@@ -1,0 +1,36 @@
+{
+    "name": "Bell & Sons - Pisos WPC Premium",
+    "short_name": "Bell & Sons",
+    "description": "Especialistas en pisos y muros WPC premium en México. Instalación profesional, garantía extendida y financiamiento disponible.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fefdfb",
+    "theme_color": "#a47e58",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "es-MX",
+    "categories": ["business", "lifestyle", "productivity"],
+    "icons": [
+        {
+            "src": "/proyectos/xqsp3rnuzjqhnnscyg4u%20(1).png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/proyectos/xqsp3rnuzjqhnnscyg4u%20(1).png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/proyectos/t1gfdpzi5erskufb58na.jpg",
+            "sizes": "1920x1080",
+            "type": "image/jpeg",
+            "platform": "wide",
+            "label": "Proyectos Bell & Sons WPC"
+        }
+    ]
+}

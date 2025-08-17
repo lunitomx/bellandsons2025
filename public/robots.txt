@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bellandsons.com.mx/sitemap.xml
+
+# Disallow admin and internal files
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /*.log
+Disallow: /tmp/
+
+# Allow search engines to crawl CSS and JS
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.webp
+
+# Block specific bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Crawl delay for heavy bots
+User-agent: Bingbot
+Crawl-delay: 1
+
+User-agent: Slurp
+Crawl-delay: 1
