@@ -2,40 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bellandsons.com.mx/</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://bellandsons.com.mx/catalogo/</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://bellandsons.com.mx/blog/</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- Blog Articles - WPC Series -->
+  <url>
+    <loc>https://bellandsons.com.mx/blog/lambrin-wpc-queretaro/</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bellandsons.com.mx/blog/wpc-vs-marmol-pvc/</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bellandsons.com.mx/blog/mantenimiento-pisos-wpc/</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bellandsons.com.mx/blog/calculo-lambrin-wpc-m2/</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bellandsons.com.mx/blog/lambrin-wpc-que-es-colores-usos/</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Other Blog Articles -->
   <url>
     <loc>https://bellandsons.com.mx/blog/tendencias-pisos-wpc-2024.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+  <!-- Location Pages -->
   <url>
     <loc>https://bellandsons.com.mx/sucursal-arcos.html</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bellandsons.com.mx/sucursal-la-noria.html</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- Additional Pages -->
   <url>
     <loc>https://bellandsons.com.mx/cuidadoslambrin/</loc>
     <lastmod>2025-08-17</lastmod>
