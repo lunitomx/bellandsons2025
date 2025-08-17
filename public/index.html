@@ -353,7 +353,7 @@
             
             <div class="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
                 <h1 class="font-serif text-fluid-xl font-bold leading-tight mb-6 fade-in">
-                    Tu hogar merece <br>
+                    Tu <span id="animated-word" class="text-primary font-normal italic"></span>hogar</span> merece <br>
                     <span class="text-primary font-normal italic">lo mejor</span>
                 </h1>
                 <p class="text-fluid-lg mb-8 font-light max-w-2xl mx-auto fade-in opacity-90">
@@ -902,6 +902,32 @@
         }, observerOptions);
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Animated word rotation in hero
+        const words = ['hogar', 'oficina', 'negocio'];
+        let currentWordIndex = 0;
+        const animatedWord = document.getElementById('animated-word');
+        
+        function changeWord() {
+            animatedWord.style.opacity = '0';
+            animatedWord.style.transform = 'translateY(-10px)';
+            
+            setTimeout(() => {
+                currentWordIndex = (currentWordIndex + 1) % words.length;
+                animatedWord.textContent = words[currentWordIndex];
+                animatedWord.style.opacity = '1';
+                animatedWord.style.transform = 'translateY(0)';
+            }, 300);
+        }
+        
+        // Add CSS transition for smooth animation
+        animatedWord.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        
+        // Start animation after 3 seconds, then every 2.5 seconds
+        setTimeout(() => {
+            changeWord();
+            setInterval(changeWord, 2500);
+        }, 3000);
 
         // Mobile menu toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
