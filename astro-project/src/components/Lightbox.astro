@@ -1,0 +1,50 @@
+---
+---
+<div id="lightbox" class="lightbox hidden" role="dialog" aria-hidden="true" aria-label="Vista ampliada de proyecto">
+    <span class="lightbox-close" aria-label="Cerrar vista ampliada">&times;</span>
+    <img src="" alt="" id="lightbox-img">
+</div>
+
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    if (lightbox && lightboxImg && closeBtn) {
+        // Close on click
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.add('hidden');
+        });
+
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.add('hidden');
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                lightbox.classList.add('hidden');
+            }
+        });
+
+        // Open lightbox (delegation)
+        // This assumes images that should open lightbox have a specific class or parent
+        // In the original code, it wasn't clear how it opened, probably missing from my view_file snippet
+        // But usually it's attached to gallery items.
+        // I will add a global listener for elements with data-lightbox
+        document.addEventListener('click', (e) => {
+            const target = e.target as HTMLElement;
+            const galleryItem = target.closest('.gallery-item img');
+            
+            if (galleryItem) {
+                const img = galleryItem as HTMLImageElement;
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.remove('hidden');
+            }
+        });
+    }
+</script>

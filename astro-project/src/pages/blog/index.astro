@@ -1,0 +1,181 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { Image } from 'astro:assets';
+
+const allPosts = await getCollection('blog');
+// Sort by date
+allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const featuredPost = allPosts.find(post => post.data.featured) || allPosts[0];
+const otherPosts = allPosts.filter(post => post.slug !== featuredPost.slug);
+---
+
+<BlogLayout title="Blog Bell & Sons | Guías WPC | Tendencias y Consejos" description="Blog especializado en pisos WPC: tendencias, instalación, mantenimiento y diseño. Guías profesionales para transformar tus espacios.">
+    <!-- Blog Hero -->
+    <section class="py-20 px-6 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h1 class="text-fluid-xl font-serif text-gray-900 mb-6">
+                Blog de Inspiración WPC
+            </h1>
+            <p class="text-text-muted text-fluid-base max-w-2xl mx-auto leading-relaxed">
+                Descubre tendencias, consejos profesionales y guías especializadas para transformar tus espacios con la elegancia y durabilidad del WPC premium.
+            </p>
+        </div>
+    </section>
+
+    <!-- Categories Filter -->
+    <section class="py-8 px-6 bg-white border-b">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="category-filter active bg-primary text-white px-6 py-2 rounded-full font-medium transition-colors" data-category="all">
+                    Todos los Artículos
+                </button>
+                <button class="category-filter bg-gray-100 text-gray-700 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-medium transition-colors" data-category="tendencias">
+                    Tendencias
+                </button>
+                <button class="category-filter bg-gray-100 text-gray-700 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-medium transition-colors" data-category="comparativas">
+                    Comparativas
+                </button>
+                <button class="category-filter bg-gray-100 text-gray-700 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-medium transition-colors" data-category="mantenimiento">
+                    Mantenimiento
+                </button>
+                <button class="category-filter bg-gray-100 text-gray-700 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-medium transition-colors" data-category="guias">
+                    Guías
+                </button>
+                <button class="category-filter bg-gray-100 text-gray-700 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-medium transition-colors" data-category="calculos">
+                    Cálculos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    {featuredPost && (
+    <section class="py-12 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-2xl font-serif text-gray-900 mb-8">Artículo Destacado</h2>
+            <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover-lift">
+                <div class="lg:flex">
+                    <div class="lg:w-1/2 h-64 lg:h-auto">
+                        <Image src={featuredPost.data.image} alt={featuredPost.data.title} 
+                             class="w-full h-full object-cover" loading="eager" />
+                    </div>
+                    <div class="lg:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium mr-4">Destacado</span>
+                            <span class="text-text-muted text-sm">{featuredPost.data.pubDate.toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                        </div>
+                        <h3 class="font-serif text-2xl lg:text-3xl text-gray-900 mb-4">
+                            {featuredPost.data.title}
+                        </h3>
+                        <p class="text-text-muted leading-relaxed mb-6 line-clamp-3">
+                            {featuredPost.data.description}
+                        </p>
+                        <a href={`/blog/${featuredPost.slug}`} 
+                           class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-primary-dark transition-colors focus-ring">
+                            Leer Artículo Completo
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    )}
+
+    <!-- Blog Grid -->
+    <section class="py-12 px-6 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-2xl font-serif text-gray-900 mb-8">Últimos Artículos</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
+                {otherPosts.map(post => (
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift blog-item" data-category={post.data.category}>
+                    <div class="relative h-48">
+                        <Image src={post.data.image} alt={post.data.title} 
+                             class="w-full h-full object-cover" loading="lazy" />
+                        <div class="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-medium capitalize">
+                            {post.data.category}
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-text-muted mb-3">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            <span>{post.data.pubDate.toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                        </div>
+                        <h3 class="font-serif text-xl text-gray-900 mb-3 line-clamp-2">
+                            {post.data.title}
+                        </h3>
+                        <p class="text-text-muted leading-relaxed mb-4 line-clamp-3">
+                            {post.data.description}
+                        </p>
+                        <a href={`/blog/${post.slug}`} 
+                           class="inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors focus-ring">
+                            Leer más <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="py-16 px-6 bg-primary">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-fluid-lg font-serif text-white mb-6">
+                Suscríbete a Nuestro Newsletter
+            </h2>
+            <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                Recibe las últimas tendencias, consejos y ofertas exclusivas directamente en tu correo electrónico.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <input type="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico para suscripción" 
+              class="flex-1 px-6 py-3 rounded-full border-0 focus:ring-2 focus:ring-white focus:outline-none">
+                <button class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors focus-ring">
+                    Suscribirse
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Category filter functionality
+        const categoryFilters = document.querySelectorAll('.category-filter');
+        const blogItems = document.querySelectorAll('.blog-item');
+        const blogGrid = document.getElementById('blog-grid');
+
+        categoryFilters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                // Remove active class from all filters
+                categoryFilters.forEach(f => {
+                    f.classList.remove('active', 'bg-primary', 'text-white');
+                    f.classList.add('bg-gray-100', 'text-gray-700');
+                    f.setAttribute('aria-pressed', 'false');
+                });
+
+                // Add active class to clicked filter
+                // @ts-ignore
+                filter.classList.add('active', 'bg-primary', 'text-white');
+                // @ts-ignore
+                filter.classList.remove('bg-gray-100', 'text-gray-700');
+                filter.setAttribute('aria-pressed', 'true');
+
+                // @ts-ignore
+                const category = filter.dataset.category;
+
+                // Filter blog items
+                blogItems.forEach(item => {
+                    // @ts-ignore
+                    if (category === 'all' || item.dataset.category === category) {
+                        // @ts-ignore
+                        item.style.display = 'block';
+                    } else {
+                        // @ts-ignore
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</BlogLayout>

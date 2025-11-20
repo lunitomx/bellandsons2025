@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #a47e58;
+    --color-primary-dark: #8a6847;
+    --color-accent: #28a745;
+    --color-accent-dark: #218838;
+    --color-secondary: #2c2c2c;
+    --color-warm-white: #fdfcfb;
+    --color-text-muted: #6b7280;
+
+    --font-serif: "Playfair Display", serif;
+    --font-sans: "Inter", sans-serif;
+}
+
+@utility text-fluid-xl {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+@utility text-fluid-lg {
+    font-size: clamp(1.875rem, 4vw, 3rem);
+}
+
+@utility text-fluid-base {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.focus-ring {
+    @apply focus:outline-none focus:ring-4 focus:ring-primary/30;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content.active {
+    max-height: 300px;
+}
+
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(44, 44, 44, 0.7) 0%, rgba(164, 126, 88, 0.3) 50%, rgba(44, 44, 44, 0.8) 100%);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #a47e58 0%, #8a6847 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.lightbox {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox.hidden {
+    display: none;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.1);
+}
+
+.parallax-hero {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .parallax-hero {
+        background-attachment: scroll;
+    }
+}

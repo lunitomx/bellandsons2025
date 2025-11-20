@@ -1,0 +1,66 @@
+---
+---
+<header class="fixed top-0 w-full bg-warm-white/95 backdrop-blur-lg z-50 shadow-sm">
+    <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <a href="/" class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                    <span class="text-white font-serif font-bold text-xl">B&S</span>
+                </div>
+                <span class="font-serif font-bold text-xl text-secondary">Bell & Sons</span>
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="/#soluciones" class="text-text-muted hover:text-primary transition-colors">Soluciones</a>
+                <a href="/#proyectos" class="text-text-muted hover:text-primary transition-colors">Proyectos</a>
+                <a href="/#catalogo" class="text-text-muted hover:text-primary transition-colors">Catálogo</a>
+                <a href="/#faq" class="text-text-muted hover:text-primary transition-colors">FAQ</a>
+                <a href="/#contacto" class="text-text-muted hover:text-primary transition-colors">Contacto</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="http://qr.ahuehuetedigital.com/whatsappbands" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex bg-accent text-white px-6 py-2.5 text-sm font-semibold rounded-full hover:bg-accent-dark transition-all duration-300 transform hover:scale-105 focus-ring">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    Cotizar Proyecto
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-secondary text-2xl p-2 focus-ring" aria-label="Abrir menú" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-warm-white border-t border-gray-200/50">
+        <div class="flex flex-col space-y-1 p-4">
+            <a href="/#soluciones" class="block py-3 px-4 text-text-muted hover:text-primary hover:bg-gray-50 rounded-lg transition-colors">Soluciones</a>
+            <a href="/#proyectos" class="block py-3 px-4 text-text-muted hover:text-primary hover:bg-gray-50 rounded-lg transition-colors">Proyectos</a>
+            <a href="/#catalogo" class="block py-3 px-4 text-text-muted hover:text-primary hover:bg-gray-50 rounded-lg transition-colors">Catálogo</a>
+            <a href="/#faq" class="block py-3 px-4 text-text-muted hover:text-primary hover:bg-gray-50 rounded-lg transition-colors">FAQ</a>
+            <a href="/#contacto" class="block py-3 px-4 text-text-muted hover:text-primary hover:bg-gray-50 rounded-lg transition-colors">Contacto</a>
+            <a href="http://qr.ahuehuetedigital.com/whatsappbands" target="_blank" rel="noopener noreferrer" class="mt-4 w-full text-center bg-accent text-white px-6 py-3 text-base font-semibold rounded-full hover:bg-accent-dark transition-all">
+                <i class="fab fa-whatsapp mr-2"></i>
+                Cotizar por WhatsApp
+            </a>
+        </div>
+    </div>
+</header>
+
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    
+    if (btn && menu) {
+        btn.addEventListener('click', () => {
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            menu.classList.toggle('hidden');
+            btn.setAttribute('aria-expanded', (!isExpanded).toString());
+            
+            const icon = btn.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
+    }
+</script>

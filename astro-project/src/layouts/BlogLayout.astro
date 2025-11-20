@@ -1,0 +1,139 @@
+---
+import '../styles/global.css';
+
+import { getImage } from "astro:assets";
+import defaultImage from '../assets/proyectos/t1gfdpzi5erskufb58na.webp';
+
+interface Props {
+	title: string;
+	description: string;
+    image?: string | ImageMetadata;
+    article?: boolean;
+}
+
+const { title, description, image = defaultImage, article = false } = Astro.props;
+
+let ogImageUrl = typeof image === 'string' ? image : (await getImage({src: image})).src;
+---
+
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:type" content={article ? "article" : "website"}>
+    <meta property="og:image" content={ogImageUrl}>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <slot name="seo" />
+    <slot name="head" />
+</head>
+
+<body class="bg-warm-white font-sans text-gray-800">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:ring-2 focus:ring-primary focus:outline-none">Saltar al contenido principal</a>
+    
+    <!-- Navigation -->
+    <header class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="/">
+                        <img src="/proyectos/xqsp3rnuzjqhnnscyg4u%20(1).png" alt="Bell & Sons Querétaro - Logotipo" class="h-10 w-auto" width="120" height="40">
+                    </a>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-primary transition-colors font-medium focus-ring">Inicio</a>
+                    <a href="/#soluciones" class="text-gray-700 hover:text-primary transition-colors font-medium focus-ring">Soluciones</a>
+                    <a href="/#proyectos" class="text-gray-700 hover:text-primary transition-colors font-medium focus-ring">Proyectos</a>
+                    <a href="/blog" class={`text-gray-700 hover:text-primary transition-colors font-medium focus-ring ${Astro.url.pathname.startsWith('/blog') ? 'text-primary font-semibold' : ''}`}>Blog</a>
+                    <a href="/#sucursales" class="text-gray-700 hover:text-primary transition-colors font-medium focus-ring">Contacto</a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-700 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary p-2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden pt-4 pb-2 border-t border-gray-100 mt-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="/" class="text-gray-700 hover:text-primary py-2">Inicio</a>
+                    <a href="/#soluciones" class="text-gray-700 hover:text-primary py-2">Soluciones</a>
+                    <a href="/#proyectos" class="text-gray-700 hover:text-primary py-2">Proyectos</a>
+                    <a href="/blog" class="text-primary font-semibold py-2">Blog</a>
+                    <a href="/#sucursales" class="text-gray-700 hover:text-primary py-2">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="pt-20" role="main">
+        <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6 mt-auto">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <img src="/proyectos/xqsp3rnuzjqhnnscyg4u%20(1).png" alt="Bell & Sons Querétaro - Logotipo" class="h-12 w-auto mb-4 brightness-0 invert" width="120" height="48">
+                    <p class="text-gray-300 leading-relaxed">
+                        Especialistas en pisos y muros WPC premium. Transformamos espacios con materiales que combinan belleza, durabilidad y sustentabilidad.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-serif text-lg text-white mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-300 hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="/#proyectos" class="text-gray-300 hover:text-white transition-colors">Proyectos</a></li>
+                        <li><a href="/blog" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="/#sucursales" class="text-gray-300 hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-serif text-lg text-white mb-4">Contacto</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-phone mr-2"></i> +52 442 141 5727</p>
+                        <p><i class="fas fa-envelope mr-2"></i> ventas@bellandsons.com.mx</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Querétaro, México</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Bell & Sons. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

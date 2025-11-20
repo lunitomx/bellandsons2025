@@ -1,0 +1,477 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Bell & Sons | Revestimientos de Alta Gama Querétaro | Diseño Premium">
+    <fragment slot="head">
+        <!-- JSON-LD Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "name": "Bell & Sons",
+                    "url": "https://bellandsons.com.mx",
+                    "logo": "https://bellandsons.com.mx/logo.png",
+                    "description": "Especialistas en revestimientos de alta gama para interiores y exteriores. Lambrín WPC, pisos SPC, Culture Stone y más en Querétaro.",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Calz. de Los Arcos 36, Local 10",
+                        "addressLocality": "Querétaro",
+                        "addressRegion": "Querétaro",
+                        "addressCountry": "MX"
+                    },
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "telephone": "+52-442-141-5727",
+                        "contactType": "sales",
+                        "areaServed": "MX",
+                        "availableLanguage": "Spanish"
+                    }
+                }
+            ]
+        }
+        </script>
+    </fragment>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center text-center parallax-hero" style="background-image: url('/proyectos/t1gfdpzi5erskufb58na.webp');">
+        <div class="hero-overlay absolute inset-0"></div>
+
+        <div class="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
+            <p class="text-fluid-lg font-light max-w-2xl mx-auto fade-in opacity-90">
+                Revestimientos de Alta Gama para Interiores y Exteriores que resisten el tiempo y abrazan cada momento familiar
+            </p>
+        </div>
+    </section>
+
+    <!-- Nuestras Soluciones Section -->
+    <section id="soluciones" class="scroll-mt-20 py-20 px-6 bg-gradient-to-b from-gray-900 to-warm-white">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-fluid-lg font-bold text-white mb-4 fade-in">
+                    Nuestras Soluciones
+                </h2>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto fade-in">
+                    Revestimientos de alta gama para transformar cualquier espacio
+                </p>
+            </div>
+
+            <!-- Categorías Principales -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12 fade-in">
+                <!-- Pisos -->
+                <div class="glass-card rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-layer-group text-primary text-xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900">Pisos</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary text-sm mr-2"></i>
+                            <span>Piso SPC - Ultra resistente</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary text-sm mr-2"></i>
+                            <span>Piso Deck Exterior WPC</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary text-sm mr-2"></i>
+                            <span>Lámina tipo Mármol PVC</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Muros y Revestimientos -->
+                <div class="glass-card rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-cube text-accent text-xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900">Muros</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent text-sm mr-2"></i>
+                            <span>Lambrín WPC Premium</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent text-sm mr-2"></i>
+                            <span>Culture Stone - Piedra cultivada</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent text-sm mr-2"></i>
+                            <span>Carbon Board - Panel carbón</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Accesorios y Complementos -->
+                <div class="glass-card rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-tools text-primary text-xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900">Accesorios</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary text-sm mr-2"></i>
+                            <span>Zoclos - Rodapiés elegantes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary text-sm mr-2"></i>
+                            <span>Reducers - Transiciones perfectas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary text-sm mr-2"></i>
+                            <span>Vigas WPC decorativas</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cards de Aplicación -->
+            <div class="grid md:grid-cols-2 gap-6 fade-in">
+                <!-- Interior Card -->
+                <a href="#catalogo" class="group relative overflow-hidden rounded-2xl shadow-xl hover-lift transition-all duration-500">
+                    <div class="aspect-[16/9] relative">
+                        <img src="/proyectos/t1gfdpzi5erskufb58na.webp"
+                             alt="Aplicaciones para interiores - Lambrín WPC y pisos SPC"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                             loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-home text-2xl mr-3 text-primary"></i>
+                            <h3 class="font-serif text-2xl font-bold">Aplicaciones Interiores</h3>
+                        </div>
+                        <p class="text-sm opacity-90 mb-4">
+                            Salas, recámaras, oficinas, cocinas y más
+                        </p>
+                        <div class="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform">
+                            <span>Ver catálogo completo</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Exterior Card -->
+                <a href="#catalogo" class="group relative overflow-hidden rounded-2xl shadow-xl hover-lift transition-all duration-500">
+                    <div class="aspect-[16/9] relative">
+                        <img src="/nuevas-fotos/aplicaciones-exteriores.webp"
+                             alt="Aplicaciones para exteriores - Deck WPC y fachadas"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                             loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-sun text-2xl mr-3 text-accent"></i>
+                            <h3 class="font-serif text-2xl font-bold">Aplicaciones Exteriores</h3>
+                        </div>
+                        <p class="text-sm opacity-90 mb-4">
+                            Terrazas, jardines, albercas, fachadas y pérgolas
+                        </p>
+                        <div class="flex items-center text-accent font-semibold group-hover:translate-x-2 transition-transform">
+                            <span>Ver catálogo completo</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="mt-12 text-center fade-in">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="http://qr.ahuehuetedigital.com/whatsappbands"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="bg-accent text-white px-8 py-4 rounded-full font-semibold inline-flex items-center shadow-lg hover:bg-accent-dark transition-all duration-300 hover-lift">
+                        <i class="fab fa-whatsapp mr-3 text-xl"></i>
+                        Cotización Inmediata
+                    </a>
+                    <a href="#catalogo"
+                       class="bg-white/95 text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg inline-flex items-center">
+                        <i class="fas fa-download mr-3"></i>
+                        Descargar Catálogo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Section -->
+    <section id="proyectos" class="scroll-mt-20 py-24 px-6 bg-warm-white">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-fluid-lg font-bold text-secondary mb-6">Proyectos que Inspiran</h2>
+                <p class="text-fluid-base text-text-muted max-w-3xl mx-auto leading-relaxed">
+                    Cada instalación es un testimonio de nuestra dedicación a la calidad y el diseño. Descubre el potencial transformador de nuestros revestimientos.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="gallery-item group relative lg:col-span-2 lg:row-span-2 rounded-2xl overflow-hidden shadow-xl hover-lift cursor-pointer fade-in">
+                    <img src="/proyectos/t1gfdpzi5erskufb58na.webp"
+                         alt="Proyecto destacado - Sala con lambrín WPC y piso SPC premium"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                        <span class="inline-block bg-primary/80 text-white text-sm px-3 py-1 rounded-full mb-3">Proyecto Destacado</span>
+                        <h3 class="font-serif text-2xl md:text-3xl font-bold mb-2">Casa Residencial Premium</h3>
+                        <p class="text-white/90 text-lg">Lambrín WPC Nogal + Piso SPC Roble Nórdico</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover-lift cursor-pointer fade-in">
+                    <img src="/nuevas-fotos/oficinas-modernas-spc.webp"
+                         alt="Oficinas modernas con piso SPC de alta resistencia"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <span class="inline-block bg-accent/80 text-white text-sm px-3 py-1 rounded-full mb-2">Comercial</span>
+                        <h3 class="font-serif text-xl font-bold mb-1">Oficinas Modernas</h3>
+                        <p class="text-white/90">Piso SPC Ultra Resistente</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover-lift cursor-pointer fade-in">
+                    <img src="/nuevas-fotos/area-de-alberca.webp"
+                         alt="Deck WPC antideslizante instalado en área de alberca"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <span class="inline-block bg-primary/80 text-white text-sm px-3 py-1 rounded-full mb-2">Exterior</span>
+                        <h3 class="font-serif text-xl font-bold mb-1">Área de Alberca</h3>
+                        <p class="text-white/90">Deck WPC Antideslizante Premium</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover-lift cursor-pointer fade-in">
+                    <img src="/nuevas-fotos/exterior-lambrin.webp"
+                         alt="Lambrín WPC instalado en exteriores para fachadas"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <span class="inline-block bg-accent/80 text-white text-sm px-3 py-1 rounded-full mb-2">Exterior</span>
+                        <h3 class="font-serif text-xl font-bold mb-1">Lambrín Exterior</h3>
+                        <p class="text-white/90">Fachadas WPC Resistentes al Clima</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover-lift cursor-pointer fade-in">
+                    <img src="/nuevas-fotos/vario-productos.webp"
+                         alt="Variedad de productos WPC y SPC disponibles en catálogo"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <span class="inline-block bg-primary/80 text-white text-sm px-3 py-1 rounded-full mb-2">Productos</span>
+                        <h3 class="font-serif text-xl font-bold mb-1">Variedad de Productos</h3>
+                        <p class="text-white/90">WPC, SPC y Accesorios Premium</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA Solicitar Muestra -->
+            <div class="text-center mt-12 fade-in">
+                <a href="http://qr.ahuehuetedigital.com/whatsappbands" target="_blank" rel="noopener noreferrer" class="bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-accent-dark transition-all duration-300 inline-flex items-center text-lg shadow-lg hover-lift">
+                    <i class="fab fa-whatsapp mr-3" aria-hidden="true"></i>
+                    Solicitar Muestra Gratis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo Section -->
+    <section id="catalogo" class="scroll-mt-20 py-24 px-6 bg-secondary text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <div class="fade-in">
+                <h2 class="font-serif text-fluid-lg font-bold mb-6">Catálogo Premium 2025</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto text-white/90">
+                    Descarga nuestro catálogo completo y descubre todas las opciones de colores, texturas y acabados disponibles.
+                </p>
+                <a href="https://heyzine.com/flip-book/288d86d021.html" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-dark transition-all duration-300 inline-flex items-center text-lg shadow-lg hover:shadow-xl focus-ring">
+                    <i class="fas fa-download mr-3" aria-hidden="true"></i>
+                    Descargar Catálogo Digital
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="scroll-mt-20 py-24 px-6 bg-warm-white">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-fluid-lg font-bold text-secondary mb-6">Preguntas Frecuentes</h2>
+                <p class="text-fluid-base text-text-muted max-w-2xl mx-auto">
+                    Resolvemos las dudas más comunes sobre nuestros revestimientos de alta gama.
+                </p>
+            </div>
+
+            <div class="space-y-4 fade-in">
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-header w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus-ring" role="button" aria-expanded="false">
+                        <span class="font-serif text-lg font-semibold text-secondary">¿Cuál es la diferencia entre lambrín WPC y Culture Stone?</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-6 text-text-muted leading-relaxed">El lambrín WPC ofrece la calidez de la madera con resistencia superior al agua y fácil mantenimiento. Culture Stone proporciona la textura auténtica de la piedra natural con la durabilidad de materiales sintéticos. Ambos son perfectos para muros de acento pero ofrecen estéticas diferentes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-header w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus-ring" role="button" aria-expanded="false">
+                        <span class="font-serif text-lg font-semibold text-secondary">¿Los pisos SPC son adecuados para zonas húmedas?</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-6 text-text-muted leading-relaxed">Absolutamente. Los pisos SPC son 100% impermeables, ideales para baños, cocinas, sótanos y cualquier área con humedad. Su núcleo de piedra caliza los hace extremadamente estables y resistentes a la expansión por humedad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-header w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus-ring" role="button" aria-expanded="false">
+                        <span class="font-serif text-lg font-semibold text-secondary">¿Qué garantía ofrecen en la instalación?</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-6 text-text-muted leading-relaxed">Ofrecemos garantía de 5 años en nuestra instalación profesional y hasta 15 años en el material contra defectos de fábrica. Incluye servicio post-venta y mantenimiento preventivo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-header w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus-ring" role="button" aria-expanded="false">
+                        <span class="font-serif text-lg font-semibold text-secondary">¿Cuánto tiempo toma la instalación?</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-6 text-text-muted leading-relaxed">Una instalación típica de 40m² toma entre 2-3 días, incluyendo preparación del subpiso y acabados. Para proyectos más grandes como lambrín WPC o Culture Stone, el tiempo varía según la complejidad del diseño.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sucursales Section -->
+    <section class="py-24 px-6 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-fluid-lg font-bold text-secondary mb-6">Visítanos en Querétaro</h2>
+                <p class="text-fluid-base text-text-muted max-w-2xl mx-auto">
+                    Experimenta la calidad de nuestros revestimientos en persona. Te asesoramos para encontrar la solución perfecta.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-semibold text-secondary mb-2">Showroom Los Arcos</h3>
+                                <p class="text-text-muted mb-1">Calz. de Los Arcos 36, Local 10</p>
+                                <p class="text-text-muted">Col. Carretas, Querétaro</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-semibold text-secondary mb-2">Horarios de Atención</h3>
+                                <p class="text-text-muted mb-1">Lunes a Viernes: 9:00 - 18:00</p>
+                                <p class="text-text-muted">Sábados: 9:00 - 14:00</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-whatsapp text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-semibold text-secondary mb-2">Contacto Directo</h3>
+                                <a href="http://qr.ahuehuetedigital.com/whatsappbands" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark font-semibold transition-colors">
+                                    (442) 141 5727 - WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.8883473340384!2d-100.37991772477791!3d20.592616780949765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35b0004378395%3A0x6c6e650494800056!2sBell%20%26%20Sons%20Lambr%C3%ADn%2C%20Pisos%2C%20Vigas%20y%20M%C3%A1rmol!5e0!3m2!1ses-419!2smx!4v1635789012345!5m2!1ses-419!2smx"
+                            width="100%"
+                            height="400"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Ubicación de Bell & Sons en Querétaro">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const item = this.closest('.faq-item');
+                const content = item.querySelector('.accordion-content');
+                const icon = this.querySelector('i');
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        const otherContent = otherItem.querySelector('.accordion-content');
+                        const otherIcon = otherItem.querySelector('.faq-header i');
+                        
+                        if (otherContent) {
+                            otherContent.classList.remove('active');
+                            otherContent.style.maxHeight = '0';
+                        }
+                        if (otherIcon) {
+                            otherIcon.classList.remove('fa-minus');
+                            otherIcon.classList.add('fa-plus');
+                        }
+                        const otherHeader = otherItem.querySelector('.faq-header');
+                        if(otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Toggle current
+                if (isExpanded) {
+                    content.classList.remove('active');
+                    content.style.maxHeight = '0';
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                    this.setAttribute('aria-expanded', 'false');
+                } else {
+                    content.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
+</Layout>
